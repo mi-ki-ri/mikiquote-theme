@@ -20,7 +20,7 @@
       <h2>
         ランダム10件
       </h2>
-      {{ range first 10 ( shuffle ( where .Site.Pages "Section" .Section ) )}}
+      {{ range first 10 ( shuffle ( .Site.Pages ) )}}
       <article>
         <h3>
           <a href="{{.Permalink}}">
