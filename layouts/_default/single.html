@@ -8,7 +8,7 @@
             <article>
                 <h3>{{.Title}}</h3>
                 {{ .Summary }}
-                <p>{{ .Date }}</p>
+                <p>{{ .Date.Format "2006-01-02" }}</p>
             </article>
         </main>
         {{- partial "footer.html" . -}}

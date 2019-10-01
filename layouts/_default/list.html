@@ -15,7 +15,7 @@
           </a>
         </h3>
         {{ .Summary }}
-        <p>{{ .Date }}</p>
+        <p>{{ .Date.Format "2006-01-02" }}</p>
       </article>
       {{ end }}
       <h2>
@@ -29,7 +29,7 @@
           </a>
         </h3>
         {{ .Summary }}
-        <p>{{ .Date }}</p>
+        <p>{{ .Date.Format "2006-01-02" }}</p>
       </article>
       {{ end }}
     </main>
