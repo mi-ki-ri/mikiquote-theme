@@ -4,11 +4,12 @@
     <body>
         {{- partial "header.html" . -}}
         <main id="content">
-            
+            {{ range (.Paginator 10).Pages }}
             <article>
-                {{ .Content }}
+                <h2>{{.Title}}</h2>
+                {{ .Summary }}
             </article>
-
+            {{ end }}
         </main>
         {{- partial "footer.html" . -}}
     </body>
