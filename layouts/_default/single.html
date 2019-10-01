@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <h2>個別表示</h2>
-        <main id="content">
-            <article>
-                <h3>{{.Title}}</h3>
-                {{ .Summary }}
-                <p>{{ .Date.Format "2006-01-02" }}</p>
-            </article>
-        </main>
-        {{- partial "footer.html" . -}}
-    </body>
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}}
+
+    <main id="content">
+      <h2>個別表示</h2>
+      <article>
+        <h3>{{.Title}}</h3>
+        {{ .Summary }}
+        <p>{{ .Date.Format "2006-01-02" }}</p>
+      </article>
+    </main>
+    {{- partial "footer.html" . -}}
+  </body>
 </html>
