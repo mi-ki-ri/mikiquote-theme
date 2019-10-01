@@ -4,13 +4,29 @@
   <body>
     {{- partial "header.html" . -}}
     <main id="content">
-      {{ range (.Paginator 10).Pages }}
+      <h2>
+        新着順20件
+      </h2>
+      {{ range (.Paginator 20).Pages }}
       <article>
-        <h2>
+        <h3>
           <a href="{{.Permalink}}">
             {{.Title}}
           </a>
-        </h2>
+        </h3>
+        {{ .Summary }}
+      </article>
+      {{ end }}
+      <h2>
+        ランダム10件
+      </h2>
+      {{ range first 10 shuffle( .Pages ) }}
+      <article>
+        <h3>
+          <a href="{{.Permalink}}">
+            {{.Title}}
+          </a>
+        </h3>
         {{ .Summary }}
       </article>
       {{ end }}
